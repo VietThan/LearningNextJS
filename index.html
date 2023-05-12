@@ -10,7 +10,22 @@
     <script type="text/jsx">
         // select the div element with 'app' id
         const app = document.getElementById('app');
-        ReactDOM.render(<h1>Develop. Preview. Ship. 🚀</h1>, app);
+
+        function Header() {
+            return <h1>Develop. Preview. Ship. 🚀</h1>;
+        }
+
+        function HomePage() {
+            return (
+                <div>
+                  {/* Nesting the Header component */}
+                  <Header />
+                </div>
+              );
+        }
+          
+
+        ReactDOM.render(<HomePage />, app);
     </script>
   </body>
 </html>
